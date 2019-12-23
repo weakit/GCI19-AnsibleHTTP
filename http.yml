@@ -1,0 +1,11 @@
+- hosts: local
+  connection: local
+
+  tasks:
+  - name: Get Response Code
+    html_module: 
+      webpage: "https://www.google.com"
+    register: result
+
+  - debug: var=result  
+     
